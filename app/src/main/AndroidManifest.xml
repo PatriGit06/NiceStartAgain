@@ -15,6 +15,7 @@
         <activity
             android:name=".Login"
             android:exported="true"
+            android:theme="@style/Theme.NiceStartAgain.NoActionBar"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,8 +26,13 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"
+            android:theme="@style/Theme.NiceStartAgain.WithActionBar"
             android:launchMode="singleTop" />
 
+        <activity
+            android:name=".Signup"
+            android:exported="false"
+            android:theme="@style/Theme.NiceStartAgain.WithActionBar" />
     </application>
 
 </manifest>

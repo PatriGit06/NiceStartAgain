@@ -1,9 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.NiceStartAgain" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Theme.NiceStartAgain" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/azulcasinegro</item>
+        <item name="colorPrimaryVariant">@color/azulcasinegro</item>
+        <item name="colorOnPrimary">@color/white</item>
     </style>
 
-    <style name="Theme.NiceStartAgain" parent="Base.Theme.NiceStartAgain" />
+    <style name="Theme.NiceStartAgain.NoActionBar" parent="Theme.NiceStartAgain">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.NiceStartAgain.WithActionBar" parent="Theme.NiceStartAgain">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+    </style>
 </resources>

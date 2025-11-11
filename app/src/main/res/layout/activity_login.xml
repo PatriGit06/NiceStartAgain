@@ -86,6 +86,7 @@
         android:layout_height="56dp"
         android:layout_marginTop="4dp"
         android:text="SIGN UP"
+        android:onClick="openSignup"
         android:textColor="@color/azulcasinegro"
         android:backgroundTint="@android:color/transparent"
         app:strokeColor="@color/azulcasinegro"

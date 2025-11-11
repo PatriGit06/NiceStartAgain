@@ -32,4 +32,9 @@ public class Login extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void openSignup(View v){
+        Intent intent = new Intent(Login.this, Signup.class);
+        startActivity(intent);
+    }
 }
