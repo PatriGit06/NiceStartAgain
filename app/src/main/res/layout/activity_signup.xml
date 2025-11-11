@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login"
+    tools:context=".Signup"
     android:background="@drawable/gradient">
 
     <ImageView
@@ -19,6 +19,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
+
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="NiceStart"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/flecha"
+        app:layout_constraintStart_toEndOf="@id/flecha"
+        app:layout_constraintTop_toTopOf="@id/flecha"
+        app:layout_constraintVertical_bias="0.437" />
 
     <ImageView
         android:id="@+id/fresitas"
