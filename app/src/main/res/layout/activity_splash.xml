@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    >
+
+
+    <ImageView
+        android:id="@+id/backView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/fresitaslogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="420dp"
+        android:src="@drawable/fresitas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="@string/app_name"
+        android:textColor="@android:color/white"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@id/fresitaslogo"
+        app:layout_constraintStart_toStartOf="@id/fresitaslogo"
+        app:layout_constraintTop_toBottomOf="@id/fresitaslogo">
+    </TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
