@@ -8,6 +8,7 @@
     tools:context=".Signup"
     android:background="@drawable/gradient">
 
+
     <ImageView
         android:id="@+id/flecha"
         android:layout_width="51dp"
@@ -16,9 +17,11 @@
         android:layout_marginTop="28dp"
         android:contentDescription="Volver atrás"
         android:src="@drawable/outline_arrow_left_alt_24"
+        android:onClick="SignLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
+
 
     <TextView
         android:id="@+id/app_name"
@@ -34,6 +37,7 @@
         app:layout_constraintTop_toTopOf="@id/flecha"
         app:layout_constraintVertical_bias="0.437" />
 
+
     <ImageView
         android:id="@+id/fresitas"
         android:layout_width="77dp"
@@ -44,6 +48,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til1"
         android:layout_width="250dp"
@@ -53,6 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="140dp"
         android:layout_marginTop="24dp" />
+
 
     <EditText
         android:id="@+id/user"
@@ -69,6 +75,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp" />
+
 
     <EditText
         android:id="@+id/password"
@@ -88,6 +95,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/user" />
 
+
     <EditText
         android:id="@+id/email"
         android:layout_width="250dp"
@@ -106,6 +114,9 @@
 
 
 
+
+
+
     <Button
         android:id="@+id/login"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -115,10 +126,12 @@
         android:backgroundTint="@color/azulcasinegro"
         android:text="LOGIN"
         android:textColor="@color/white"
+        android:onClick="goToLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/email" />
+
 
     <Button
         android:id="@+id/signup"
@@ -129,10 +142,14 @@
         android:text="SIGN UP"
         android:textColor="@color/azulcasinegro"
         android:backgroundTint="@android:color/transparent"
+        android:onClick="createAccount"
         app:strokeColor="@color/azulcasinegro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login" />
 
 
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+

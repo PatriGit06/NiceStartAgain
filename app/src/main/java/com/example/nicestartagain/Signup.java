@@ -31,4 +31,16 @@ public class Signup extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void goToLogin(View view) {
+        Intent intent = new Intent(Signup.this, Login.class);
+        startActivity(intent);
+        finish();
+    }
+    public void createAccount(View view) {
+        Intent intent = new Intent(Signup.this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
+    }
 }
