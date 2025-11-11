@@ -20,7 +20,6 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
-
     <TextView
         android:id="@+id/app_name"
         android:layout_width="wrap_content"
@@ -89,6 +88,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/user" />
 
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="#80FFFFFF"
+        android:textColor="@color/azulcasinegro"
+        android:hint="Email"
+        android:drawableStart="@drawable/outline_alternate_email_24"
+        android:drawablePadding="15dp"
+        android:paddingStart="5dp"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
 
 
     <Button
@@ -103,7 +118,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password" />
+        app:layout_constraintTop_toBottomOf="@id/email" />
 
     <Button
         android:id="@+id/signup"
