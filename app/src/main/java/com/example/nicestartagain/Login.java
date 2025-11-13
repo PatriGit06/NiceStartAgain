@@ -16,7 +16,12 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         setContentView(R.layout.activity_login);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -24,16 +29,14 @@ public class Login extends AppCompatActivity {
         });
     }
 
-    public void openMind(View v){
+    public void SignLogin(View v){
         Intent intent = new Intent(Login.this, MainActivity.class);
-
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
-        finish();
     }
 
-    public void openSignup(View v){
+    public void OpenSignup(View v){
         Intent intent = new Intent(Login.this, Signup.class);
         startActivity(intent);
     }

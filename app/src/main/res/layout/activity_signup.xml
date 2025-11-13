@@ -12,12 +12,12 @@
     <ImageView
         android:id="@+id/flecha"
         android:layout_width="51dp"
-        android:layout_height="46dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
         android:contentDescription="Volver atrás"
         android:src="@drawable/outline_arrow_left_alt_24"
-        android:onClick="SignLogin"
+        android:onClick="OpenLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
@@ -126,7 +126,7 @@
         android:backgroundTint="@color/azulcasinegro"
         android:text="LOGIN"
         android:textColor="@color/white"
-        android:onClick="goToLogin"
+        android:onClick="openMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -142,14 +142,11 @@
         android:text="SIGN UP"
         android:textColor="@color/azulcasinegro"
         android:backgroundTint="@android:color/transparent"
-        android:onClick="createAccount"
+        android:onClick="openMain"
         app:strokeColor="@color/azulcasinegro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login" />
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
