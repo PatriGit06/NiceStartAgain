@@ -132,7 +132,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/email" />
 
-
     <Button
         android:id="@+id/signup"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"

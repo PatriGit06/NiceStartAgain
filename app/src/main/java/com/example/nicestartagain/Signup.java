@@ -41,7 +41,7 @@ public class Signup extends AppCompatActivity {
                 .transition(DrawableTransitionOptions.withCrossFade(100))
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.)))
+                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.rosaoscuro)))
                 .into(mSea);
 
 
@@ -49,12 +49,12 @@ public class Signup extends AppCompatActivity {
 
 
     public void OpenLogin(View view) {
-        startActivity(new Intent(Signup.this, Login.class));
-        finish();
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
     }
 
-    public void openMain(View v) {
-        Intent intent = new Intent(Signup.this, MainActivity.class);
+    public void openMain(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }
