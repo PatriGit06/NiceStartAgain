@@ -1,4 +1,4 @@
-# Nice Start Again 📱
+# Nice Start Again 
 
 **Nice Start Again** es una aplicación móvil desarrollada en **Android Studio (Java)** que permite a los usuarios **registrarse, iniciar sesión y crear su propio perfil personal** dentro de la app.  
 
