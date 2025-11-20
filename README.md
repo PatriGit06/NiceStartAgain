@@ -60,7 +60,6 @@ Se **visualiza el perfil del usuario** que ha creado su cuenta anteriormente y h
 - **Lenguaje de programación:** Java
 - **Entorno de desarrollo:** Android Studio
 - **Plataforma:** Android
-- **Almacenamiento:** Base de datos local
 - **Interfaz de usuario:** XML
 
 ##  Características Técnicas
