@@ -26,7 +26,7 @@ Permite **crear una cuenta nueva** ingresando los datos básicos (email, contras
 ### 3. Guardado de Datos del Usuario
 Se **almacenan y confirman los datos** del nuevo usuario para que pueda acceder a la app siempre que quiera.
 
-### 🔐 4. Inicio de Sesión
+### 4. Inicio de Sesión
 Muestra al usuario la **pantalla de inicio de sesión**, donde debe volver a ingresar sus credenciales para acceder a su perfil.
 
 <div align="center">
