@@ -24,11 +24,9 @@ Muestra al usuario la **pantalla de inicio de sesión**, donde debe volver a ing
 
 <img width="311" height="548" alt="Captura de pantalla 2025-11-13 133811" src="https://github.com/user-attachments/assets/b2622ae2-bf0d-4513-a1b3-e41b6491a88f" />
 
-
-<img width="273" height="487" alt="Captura de pantalla 2025-11-20 133620" src="https://github.com/user-attachments/assets/adf32a52-42df-49c2-8bd6-f79ecf592288" />
-
 #### 5. Pantalla de Menu
 Se muestra una barra que ofrece varias opciones, la llave inglesa ofrece llevar al usuario a la pantalla de ajustes, la de los 3 puntos te ofrece varias opciones de las cuales puedes elegir cual quieres.
+<img width="273" height="487" alt="Captura de pantalla 2025-11-20 133620" src="https://github.com/user-attachments/assets/adf32a52-42df-49c2-8bd6-f79ecf592288" />
 
 #### 6. Pantalla de Perfil
 Se **visualiza el perfil del usuario** que ha creado su cuenta anteriormente y ha metido una breve introducción sobre sí mismo para que otras personas lo puedan ver si se meten en su perfil y puedan conocerse mejor en base a la información
