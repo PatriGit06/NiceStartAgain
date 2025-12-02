@@ -3,36 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/item2"
-        android:title="Settings"
-        app:showAsAction="never" />
-
-    <item
         android:id="@+id/item1"
         android:title="Copy"
         android:icon="@drawable/llavemenu"
-        app:showAsAction="ifRoom">
+        app:showAsAction="ifRoom" />
 
+    <item
+        android:id="@+id/item2"
+        android:title="Settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/item3"
+        android:title="More"
+        app:showAsAction="never">
         <menu>
-
             <item
-                android:id="@+id/item3"
-                android:title="Bottom app bar"
-                app:showAsAction="never" />
-
+                android:id="@+id/subitem1"
+                android:title="Bottom app bar" />
             <item
-                android:id="@+id/item4"
-                android:title="Bottom navigation"
-                app:showAsAction="never" />
-
-
+                android:id="@+id/subitem2"
+                android:title="Bottom navigation" />
             <item
-                android:id="@+id/item5"
-                android:title="Signout"
-                app:showAsAction="never"
-                />
-
+                android:id="@+id/subitem3"
+                android:title="Signout" />
         </menu>
-
     </item>
 </menu>
