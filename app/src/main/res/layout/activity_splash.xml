@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:text="@string/app_name"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="@id/fresitaslogo"
         app:layout_constraintStart_toStartOf="@id/fresitaslogo"

@@ -28,14 +28,13 @@ public class Splash extends AppCompatActivity {
         ImageView mSea = findViewById(R.id.backView);
 
         Glide.with(this)
-                .load("https://i.pinimg.com/736x/24/ea/48/24ea48494dae2a416a0374c79a0dde90.jpg")
+                .load(R.drawable.fresaswallpaper)
                 .transition(DrawableTransitionOptions.withCrossFade(100))
                 .centerCrop()
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.rosapastel)))
-                .circleCrop()
+                //.diskCacheStrategy(DiskCacheStrategy.ALL)
+                //.placeholder(new ColorDrawable(this.getResources().getColor(R.color.gradient)))
+                //.circleCrop()
                 .into(mSea);
-        openApp();
     }
     private void openApp() {
 
