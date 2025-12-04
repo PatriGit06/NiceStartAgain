@@ -7,6 +7,7 @@ import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
  public class MainActivity extends AppCompatActivity {
      private SwipeRefreshLayout swipeLayout;
+     private WebView miVisorWeb;
 
      @Override
      protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,9 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
          EdgeToEdge.enable(this);
          setContentView(R.layout.activity_main);
 
-         TextView mycontext=findViewById(R.id.textview);
+         miVisorWeb=(WebView) findViewById(R.id.vistaweb);
+
+         WebView mycontext=findViewById(R.id.vistaweb);
          registerForContextMenu(mycontext);
          swipeLayout = findViewById(R.id.myswipe);
          swipeLayout.setOnRefreshListener(mOnRefreshListener);
@@ -47,7 +51,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
          @Override
          public void onRefresh() {
-             Toast toast0 = Toast.makeText(MainActivity.this, "Hi there! I don't exist :)", Toast.LENGTH_LONG);
+             Toast toast0 = Toast.makeText(MainActivity.this, "Has refrescado la página con éxito", Toast.LENGTH_LONG);
              toast0.show();
              swipeLayout.setRefreshing(false);
          }
