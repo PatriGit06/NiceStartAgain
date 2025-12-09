@@ -62,6 +62,11 @@ Al **pulsar el icono de llave** , se despliega un **panel de acciones rápidas**
 <div align="center">
 <img width="307" height="653" alt="Captura de pantalla 2025-12-09 133335" src="https://github.com/user-attachments/assets/465fc746-af6d-4813-ae04-925636f83bee" alt="Volver al inicio" />
 
+##  8. Licencia
+
+Este proyecto está licenciado bajo **Creative Commons Atribución-CompartirIgual 4.0 Internacional**.  
+[![CC BY-SA 4.0](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
+
 ---
 
 ## Tecnologías Utilizadas
