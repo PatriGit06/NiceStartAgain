@@ -53,6 +53,16 @@ Se **visualiza el perfil del usuario** que ha creado su cuenta anteriormente y h
 <img width="200" src="https://github.com/user-attachments/assets/ffd5bf06-1060-4b96-a263-1002bca6c2f7" alt="Perfil de usuario"/>
 </div>
 
+### 7. Opcion de volver al inicio
+Al **pulsar el icono de llave** , se despliega un **panel de acciones rápidas**, ofreciendo un control centralizado sobre la navegación esencial de la aplicación. Este diseño permite:
+
+-   **Acciones inmediatas:** Recibir una **notificación emergente tipo modal** que pone "*Options!!*" con opciones claras.
+-   **Navegación intuitiva:** Regresar de forma instantánea a la pantalla principal **pulsando el botón "Inicio"**.
+
+<img width="307" height="653" alt="Panel de acciones al pulsar la llave - Captura de pantalla" src="https://github.com/user-attachments/assets/465fc746-af6d-4813-ae04-925636f83bee" />
+
+<img width="307" height="653" alt="Captura de pantalla 2025-12-09 133335" src="https://github.com/user-attachments/assets/465fc746-af6d-4813-ae04-925636f83bee" alt="Volver al inicio" />
+
 ---
 
 ## Tecnologías Utilizadas
