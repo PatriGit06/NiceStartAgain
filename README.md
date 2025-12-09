@@ -46,8 +46,8 @@ Interfaz de navegación intuitiva que incluye:
 ### 6. Perfil de Usuario
 Se **visualiza el perfil del usuario** que ha creado su cuenta anteriormente y ha añadido una breve introducción sobre sí mismo. Esto permite que:
 - **Otros usuarios** puedan ver su información al visitar su perfil
-- **Establecer conexiones** en base a la información compartida
-- **Personalizar** la experiencia dentro de la aplicación
+- **Se establezcan conexiones** en base a la información compartida
+
 
 <div align="center">
 <img width="200" src="https://github.com/user-attachments/assets/ffd5bf06-1060-4b96-a263-1002bca6c2f7" alt="Perfil de usuario"/>
