@@ -58,7 +58,8 @@ Al **pulsar el icono de llave** , se despliega un **panel de acciones rápidas**
 
 -   **Acciones inmediatas:** Recibir una **notificación emergente tipo modal** que pone "*Options!!*" con opciones claras.
 -   **Navegación intuitiva:** Regresar de forma instantánea a la pantalla principal **pulsando el botón "Inicio"**.
-
+  
+<div align="center">
 <img width="307" height="653" alt="Captura de pantalla 2025-12-09 133335" src="https://github.com/user-attachments/assets/465fc746-af6d-4813-ae04-925636f83bee" alt="Volver al inicio" />
 
 ---
