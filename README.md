@@ -37,10 +37,10 @@ Muestra al usuario la **pantalla de inicio de sesión**, donde debe volver a ing
 Interfaz de navegación intuitiva que incluye:
 - **Ícono de llave inglesa** → Acceso directo a ajustes y configuraciones
 - **Menú de tres puntos** → Opciones adicionales y funcionalidades extra
-- **Navegación fluida** entre diferentes secciones de la aplicación
+- **Refresh** → Cada vez que se refresca la app sale una imagen nueva generada por ia de una persona que no existe
 
 <div align="center">
-<img width="200" src="https://github.com/user-attachments/assets/adf32a52-42df-49c2-8bd6-f79ecf592288" alt="Menú principal"/>
+<img width="298" height="648" alt="Captura de pantalla 2025-12-09 132803" src="https://github.com/user-attachments/assets/6a37bd63-d15a-423f-a575-beb42bcafa95" alt="Menú principal"/>
 </div>
 
 ### 6. Perfil de Usuario
