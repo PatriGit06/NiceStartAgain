@@ -13,7 +13,7 @@ Se muestra el **logo de la app** junto con el nombre (**Nice Start Again**).
 Su intención es **captar la atención del usuario** en los primeros segundos de uso.
 
 <div align="center">
-<img width="200" src="https://github.com/user-attachments/assets/774fdb4c-af96-4676-9e52-91c698ea6934" alt="Pantalla de inicio"/>
+<img width="275" height="484" alt="Captura de pantalla 2025-12-09 132228" src="https://github.com/user-attachments/assets/94a53ebf-3ba5-4d8d-b673-0a61410f3ab7" alt="Pantalla de inicio" />
 </div>
 
 ### 2. Registro de Usuarios
