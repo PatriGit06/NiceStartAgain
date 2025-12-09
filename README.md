@@ -71,9 +71,6 @@ Al **pulsar el icono de llave** , se despliega un **panel de acciones rápidas**
 - **Plataforma:** Android
 - **Interfaz de usuario:** XML
 
-##  Características Técnicas
-
-
 ---
 
 <div align="center">
