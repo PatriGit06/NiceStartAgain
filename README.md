@@ -20,7 +20,7 @@ Su intención es **captar la atención del usuario** en los primeros segundos de
 Permite **crear una cuenta nueva** ingresando los datos básicos (email, contraseña, etc.).
 
 <div align="center">
-<img width="200" src="https://github.com/user-attachments/assets/876c17ce-cf0e-46d7-8bae-2a031bd6ad04" alt="Pantalla de registro"/>
+<img width="270" height="488" alt="Captura de pantalla 2025-12-09 132250" src="https://github.com/user-attachments/assets/bf7a5d2f-5dde-4ba4-82c6-b865fee52190" alt="Pantalla de registro"/>
 </div>
 
 ### 3. Guardado de Datos del Usuario
@@ -30,7 +30,7 @@ Se **almacenan y confirman los datos** del nuevo usuario para que pueda acceder 
 Muestra al usuario la **pantalla de inicio de sesión**, donde debe volver a ingresar sus credenciales para acceder a su perfil.
 
 <div align="center">
-<img width="200" src="https://github.com/user-attachments/assets/b2622ae2-bf0d-4513-a1b3-e41b6491a88f" alt="Pantalla de login"/>
+<img width="270" height="483" alt="Captura de pantalla 2025-12-09 132308" src="https://github.com/user-attachments/assets/66f3f32f-581f-4265-a650-5e880807c67d" alt="Pantalla de login"/>
 </div>
 
 ### 5. Menú Principal
