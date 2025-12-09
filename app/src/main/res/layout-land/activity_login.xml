@@ -9,24 +9,10 @@
     android:background="@drawable/gradient">
 
     <ImageView
-        android:id="@+id/overlay_merry"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:alpha="0.35"
-        android:scaleType="centerCrop"
-        android:src="@drawable/fresasfondo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
         android:id="@+id/fresitas"
         android:layout_width="77dp"
         android:layout_height="86dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/fresitas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +73,6 @@
         android:backgroundTint="@color/azulcasinegro"
         android:text="LOGIN"
         android:textColor="@color/white"
-        android:onClick="SignLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +85,6 @@
         android:layout_height="56dp"
         android:layout_marginTop="4dp"
         android:text="SIGN UP"
-        android:onClick="OpenSignup"
         android:textColor="@color/azulcasinegro"
         android:backgroundTint="@android:color/transparent"
         app:strokeColor="@color/azulcasinegro"

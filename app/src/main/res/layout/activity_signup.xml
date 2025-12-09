@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login"
+    tools:context=".Signup"
     android:background="@drawable/gradient">
 
     <ImageView
@@ -23,6 +23,35 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
+        android:id="@+id/flecha"
+        android:layout_width="51dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="Volver atrás"
+        android:src="@drawable/outline_arrow_left_alt_24"
+        android:onClick="OpenLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="NiceStart"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/flecha"
+        app:layout_constraintStart_toEndOf="@id/flecha"
+        app:layout_constraintTop_toTopOf="@id/flecha"
+        app:layout_constraintVertical_bias="0.437" />
+
+
+    <ImageView
         android:id="@+id/fresitas"
         android:layout_width="77dp"
         android:layout_height="86dp"
@@ -31,6 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til1"
@@ -41,6 +71,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="140dp"
         android:layout_marginTop="24dp" />
+
 
     <EditText
         android:id="@+id/user"
@@ -57,6 +88,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp" />
+
 
     <EditText
         android:id="@+id/password"
@@ -77,6 +109,26 @@
         app:layout_constraintTop_toBottomOf="@id/user" />
 
 
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="#80FFFFFF"
+        android:textColor="@color/azulcasinegro"
+        android:hint="Email"
+        android:drawableStart="@drawable/outline_alternate_email_24"
+        android:drawablePadding="15dp"
+        android:paddingStart="5dp"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+
+
+
+
 
     <Button
         android:id="@+id/login"
@@ -87,11 +139,11 @@
         android:backgroundTint="@color/azulcasinegro"
         android:text="LOGIN"
         android:textColor="@color/white"
-        android:onClick="SignLogin"
+        android:onClick="openMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password" />
+        app:layout_constraintTop_toBottomOf="@id/email" />
 
     <Button
         android:id="@+id/signup"
@@ -100,13 +152,13 @@
         android:layout_height="56dp"
         android:layout_marginTop="4dp"
         android:text="SIGN UP"
-        android:onClick="OpenSignup"
         android:textColor="@color/azulcasinegro"
         android:backgroundTint="@android:color/transparent"
+        android:onClick="openMain"
         app:strokeColor="@color/azulcasinegro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
