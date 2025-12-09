@@ -34,16 +34,7 @@ public class Signup extends AppCompatActivity {
             return insets;
         });
 
-        ImageView mSea = findViewById(R.id.backView);
-
-        Glide.with(this)
-                .load("https://www.freepik.es/fotos-vectores-gratis/fresas-verticales")
-                .transition(DrawableTransitionOptions.withCrossFade(100))
-                .centerCrop()
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.rosaoscuro)))
-                .into(mSea);
-
+        ImageView mSea = findViewById(R.id.fresitas);
 
     }
 

@@ -9,6 +9,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -21,6 +22,10 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         ImageView logo = findViewById(R.id.fresitaslogo);
         Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in);
         logo.startAnimation(fadeIn);
@@ -31,27 +36,22 @@ public class Splash extends AppCompatActivity {
                 .load(R.drawable.fresaswallpaper)
                 .transition(DrawableTransitionOptions.withCrossFade(100))
                 .centerCrop()
-                //.diskCacheStrategy(DiskCacheStrategy.ALL)
-                //.placeholder(new ColorDrawable(this.getResources().getColor(R.color.gradient)))
-                //.circleCrop()
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .placeholder(ContextCompat.getDrawable(this, R.drawable.gradient))
                 .into(mSea);
+        openApp();
     }
-    private void openApp() {
 
+    private void openApp() {
         Handler handler = new Handler();
-        handler.postDelayed(new Runnable()
-        {
+        handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Splash
-                        .this, Login.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                Intent intent = new Intent(Splash.this, Login.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();
             }
         }, 5000);
-
-
     }
 }

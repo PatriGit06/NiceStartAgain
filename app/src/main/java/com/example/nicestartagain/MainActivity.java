@@ -1,4 +1,4 @@
- package com.example.nicestartagain;
+package com.example.nicestartagain;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,10 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-//import androidx.activity.EdgeToEdge;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,126 +20,152 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
- public class MainActivity extends AppCompatActivity {
-     private SwipeRefreshLayout swipeLayout;
-     private WebView miVisorWeb;
+public class MainActivity extends AppCompatActivity {
+    private WebView miVisorWeb;
+    private SwipeRefreshLayout swipeLayout;
 
-     @Override
-     protected void onCreate(Bundle savedInstanceState) {
-         super.onCreate(savedInstanceState);
-         EdgeToEdge.enable(this);
-         setContentView(R.layout.activity_main);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
 
-         miVisorWeb=(WebView) findViewById(R.id.vistaweb);
+        // 1. WebView - CONECTADO CON TU XML (vistaweb)
+        miVisorWeb = findViewById(R.id.vistaweb);
 
-         WebView mycontext=findViewById(R.id.vistaweb);
-         registerForContextMenu(mycontext);
-         swipeLayout = findViewById(R.id.myswipe);
-         swipeLayout.setOnRefreshListener(mOnRefreshListener);
+        // Cargar contenido en el WebView (HTML con imagen)
+        String html =
+                "<html>" +
+                        "<head><style>" +
+                        "html, body { margin:0; padding:0; height:100%; overflow:hidden; }" +
+                        "img { width:100%; height:100%; object-fit:cover; }" +
+                        "</style></head>" +
+                        "<body>" +
+                        "<img src='https://thispersondoesnotexist.com' />" +
+                        "</body></html>";
 
+        miVisorWeb.loadDataWithBaseURL(null, html, "text/html", "UTF-8", null);
 
-         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-             return insets;
-         });
-     }
-     protected SwipeRefreshLayout.OnRefreshListener
-             mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
+        // 2. SwipeRefreshLayout - CONECTADO CON TU XML (myswipe)
+        swipeLayout = findViewById(R.id.myswipe);
+        swipeLayout.setOnRefreshListener(mOnRefreshListener);
 
-         @Override
-         public void onRefresh() {
-             Toast toast0 = Toast.makeText(MainActivity.this, "Has refrescado la página con éxito", Toast.LENGTH_LONG);
-             toast0.show();
-             swipeLayout.setRefreshing(false);
-         }
-     };
+        // 3. Context Menu para WebView
+        registerForContextMenu(miVisorWeb);
 
-         @Override
-         public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuinfo) {
-             super.onCreateContextMenu(menu, v, menuinfo);
-             getMenuInflater().inflate(R.menu.menu_context, menu);
-         }
+        // Long click listener para WebView
+        miVisorWeb.setOnLongClickListener(v -> {
+            openContextMenu(miVisorWeb);
+            return true;
+        });
 
+        // 4. Edge to edge handling - CONECTADO CON TU XML (main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+    }
 
-         public boolean onContextItemSelected(MenuItem item) {
-//        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)
-//                item.getMenuInfo();
-             if (item.getItemId() == R.id.item1) {
-                 Toast toast = Toast.makeText(this, "Item copied", Toast.LENGTH_LONG);
-                 toast.show();
-                 return true;
-             } else if (item.getItemId() == R.id.item2) {
-                 Toast toast2 = Toast.makeText(this, "Downloading item...",
-                         Toast.LENGTH_LONG);
-                 toast2.show();
-                 return true;
-             }
-             return super.onContextItemSelected(item);
-         }
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        // AQUÍ NECESITO SABER QUÉ MENÚ TIENES: ¿menu_appbar? ¿menu_context?
+        getMenuInflater().inflate(R.menu.menu_appbar, menu); // O el que uses
+    }
 
-         @Override
-         public boolean onCreateOptionsMenu(Menu menu) {
-             // Inflate the menu; this adds items to the action bar if it is present.
-             getMenuInflater().inflate(R.menu.menu_appbar, menu);
-             return true;
-         }
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        // AQUÍ NECESITO LOS IDs DE TU MENÚ
+        if (item.getItemId() == R.id.item1) { // CAMBIA SEGÚN TUS IDs
+            Toast.makeText(this, "Item copied", Toast.LENGTH_LONG).show();
+            return true;
+        } else if (item.getItemId() == R.id.item2) { // CAMBIA SEGÚN TUS IDs
+            Toast.makeText(this, "Downloading item...", Toast.LENGTH_LONG).show();
+            return true;
+        } else if (item.getItemId() == R.id.item3) { // CAMBIA SEGÚN TUS IDs
+            // Diálogo para salir/ir al login
+            MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
+            builder.setTitle("¿Quieres salir?");
+            builder.setMessage("Acción importante");
 
-         @Override
-         public boolean onOptionsItemSelected(MenuItem item) {
-             // Handle action bar item clicks here. The action bar will
-             // automatically handle clicks on the Home/Up button, so long
-             // as you specify a parent activity in AndroidManifest.xml.
-             int id = item.getItemId();
+            builder.setPositiveButton("Ir al login", (dialog, which) -> {
+                Intent intent = new Intent(MainActivity.this, Login.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            });
 
-             if (id == R.id.item1) {
-//            showAlertDialogButtonClicked(Main.this);
-                 showAlertDialogButtonClicked(MainActivity.this);
-                 return true;
-             }
-             if (id == R.id.item2) {
-                 Toast.makeText(this, "Fixing", Toast.LENGTH_LONG).show();
-                 return true;
-             } else if (id == R.id.item3) { // Si tienes más ítems
-                 showAlertDialogButtonClicked(MainActivity.this);
-                 return true;
-             }
+            builder.setNegativeButton("Cancelar", (dialog, which) -> dialog.dismiss());
 
+            AlertDialog dialog = builder.create();
+            dialog.show();
+            return true;
+        }
 
+        return super.onContextItemSelected(item);
+    }
 
-             return super.onOptionsItemSelected(item);
-         }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // AQUÍ NECESITO SABER QUÉ MENÚ TIENES
+        getMenuInflater().inflate(R.menu.menu_appbar, menu); // O el que uses
+        return true;
+    }
 
-         public void showAlertDialogButtonClicked(MainActivity view){
-             MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
 
-             builder.setTitle("Uiba!");
-             builder.setMessage("A dónde quieres ir?");
-             builder.setIcon(R.drawable.llavecita);
+        // AQUÍ NECESITO LOS IDs DE TU MENÚ PARA ADAPTAR
+        if (id == R.id.item1) { // CAMBIA SEGÚN TUS IDs
+            showAlertDialogButtonClicked(MainActivity.this);
+            return true;
+        }
 
-             builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                 @Override
-                 public void onClick(DialogInterface dialog, int which) {
-                     dialog.dismiss();
-                 }
-             });
-             builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                 @Override
-                 public void onClick(DialogInterface dialog, int which) {
-                     dialog.dismiss();
-                 }
-               });
+        if (id == R.id.item2) { // CAMBIA SEGÚN TUS IDs
+            Toast.makeText(this, "Fixing", Toast.LENGTH_LONG).show();
+            return true;
+        }
 
-             builder.setNeutralButton("Nada", new DialogInterface.OnClickListener() {
-                 @Override
-                 public void onClick(DialogInterface dialog, int which) {
-                     dialog.dismiss();
-                 }
-             });
-             AlertDialog dialog=builder.create();
-             dialog.show();
-             }
- }
+        if (id == R.id.item3) { // CAMBIA SEGÚN TUS IDs
+            // Puedo usar este para abrir Profile
+            startActivity(new Intent(MainActivity.this, Profile.class));
+            return true;
+        }
 
 
+        return super.onOptionsItemSelected(item);
+    }
 
+    private void showAlertDialogButtonClicked() {
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
+        builder.setTitle("Options!!");
+        builder.setMessage("Where do you go?");
+        builder.setIcon(R.drawable.fresitas); // Cambia por tu ícono
+
+        builder.setPositiveButton("Scrolling", (dialog, which) ->
+                Toast.makeText(MainActivity.this, "Scrolling...", Toast.LENGTH_LONG).show()
+        );
+
+        builder.setNegativeButton("Do nothing", (dialog, which) -> dialog.dismiss());
+
+        builder.setNeutralButton("Inicio", (dialog, which) -> {
+            Intent intent = new Intent(MainActivity.this, Login.class);
+            startActivity(intent);
+        });
+
+        builder.show();
+    }
+
+    public void showAlertDialogButtonClicked(MainActivity view) {
+        showAlertDialogButtonClicked(); // Llama al método sin parámetros
+    }
+
+    protected SwipeRefreshLayout.OnRefreshListener mOnRefreshListener =
+            () -> {
+                Toast.makeText(MainActivity.this,
+                        "Hi there! I don't exist :)",
+                        Toast.LENGTH_LONG).show();
+                swipeLayout.setRefreshing(false);
+            };
+}
