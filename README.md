@@ -30,10 +30,10 @@ El proyecto busca ofrecer una **interfaz moderna e intuitiva**, diseñada para q
 |----------|-------|------------|
 | Splash / Principal | ![Splash](https://github.com/user-attachments/assets/c7a7c577-4f15-4e42-be4f-e9affc8c525b) |
  Animación de logo y fondo, abre Login tras 5s, se encuentra implementada en la RamaLottie |
-| Icono app |<img width="314" height="75" alt="image" src="https://github.com/user-attachments/assets/11409eee-fe13-420f-b3ee-735451ce3e23" />
+| Icono app |<img width="58" height="63" alt="Captura de pantalla 2026-02-05 123708" src="https://github.com/user-attachments/assets/4683c84b-d759-4a88-8ac8-4cc39d7fc2ce" />
 | Login | <img width="298" height="653" alt="Captura de pantalla 2026-02-05 123759" src="https://github.com/user-attachments/assets/1e44d367-1b0a-4ee6-b5fd-923681ce323b" /> | Login con campos y botones de navegación |
-| Registro (Signup) |<img width="360" height="641" alt="Captura de pantalla 2025-12-08 133638" src="https://github.com/user-attachments/assets/e8bce2c0-d00d-4620-9728-0f355fefa935" />| Registro de usuario con Username, Password y Email |
-| Perfil de Usuario |<img width="367" height="656" alt="image" src="https://github.com/user-attachments/assets/ba344ca9-b362-4bf9-bd38-bce877766dbb" />| Visualización de avatar, nombre y descripción |
+| Registro (Signup) |<img width="363" height="658" alt="Captura de pantalla 2026-02-05 124125" src="https://github.com/user-attachments/assets/a5b9813f-696e-405e-b5d7-3fbb0c1a2056" /> | Registro de usuario con Username, Password y Email |
+| Perfil de Usuario |<img width="306" height="545" alt="Captura de pantalla 2026-02-05 124147" src="https://github.com/user-attachments/assets/e47ae7c7-19ae-4175-a2b2-233a473705e9" /> | Visualización de avatar, nombre y descripción |
 | MainActivity |<img width="353" height="643" alt="Captura de pantalla 2025-12-08 134054" src="https://github.com/user-attachments/assets/5effe96c-d212-4728-af78-89c556d17ebb" />| WebView con SwipeRefreshLayout y menú contextual |
 |BottomAppBar |<img width="315" height="609" alt="image" src="https://github.com/user-attachments/assets/141923e1-a715-46d2-b3a2-7e3fdf74aa6a" />|SwipeRefreshLayout con WebView y BottomAppBar|
 
