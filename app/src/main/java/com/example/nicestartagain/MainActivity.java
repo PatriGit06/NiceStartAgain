@@ -18,7 +18,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
     private WebView miVisorWeb;
@@ -30,10 +32,9 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // 1. WebView - CONECTADO CON TU XML (vistaweb)
+
         miVisorWeb = findViewById(R.id.vistaweb);
 
-        // Cargar contenido en el WebView (HTML con imagen)
         String html =
                 "<html>" +
                         "<head><style>" +
@@ -47,8 +48,6 @@ public class MainActivity extends AppCompatActivity {
         miVisorWeb.loadDataWithBaseURL(null, html, "text/html", "UTF-8", null);
 
         // 2. SwipeRefreshLayout - CONECTADO CON TU XML (myswipe)
-        swipeLayout = findViewById(R.id.myswipe);
-        swipeLayout.setOnRefreshListener(mOnRefreshListener);
 
         // 3. Context Menu para WebView
         registerForContextMenu(miVisorWeb);
@@ -76,15 +75,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-        // AQUÍ NECESITO LOS IDs DE TU MENÚ
-        if (item.getItemId() == R.id.item1) { // CAMBIA SEGÚN TUS IDs
+        if (item.getItemId() == R.id.item1) {
             Toast.makeText(this, "Item copied", Toast.LENGTH_LONG).show();
             return true;
-        } else if (item.getItemId() == R.id.item2) { // CAMBIA SEGÚN TUS IDs
+        } else if (item.getItemId() == R.id.item2) {
             Toast.makeText(this, "Downloading item...", Toast.LENGTH_LONG).show();
             return true;
-        } else if (item.getItemId() == R.id.item3) { // CAMBIA SEGÚN TUS IDs
-            // Diálogo para salir/ir al login
+        } else if (item.getItemId() == R.id.item3) {
+
             MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
             builder.setTitle("¿Quieres salir?");
             builder.setMessage("Acción importante");
@@ -107,28 +105,24 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // AQUÍ NECESITO SABER QUÉ MENÚ TIENES
-        getMenuInflater().inflate(R.menu.menu_appbar, menu); // O el que uses
+        getMenuInflater().inflate(R.menu.menu_appbar, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-
-        // AQUÍ NECESITO LOS IDs DE TU MENÚ PARA ADAPTAR
-        if (id == R.id.item1) { // CAMBIA SEGÚN TUS IDs
+        if (id == R.id.item1) {
             showAlertDialogButtonClicked(MainActivity.this);
             return true;
         }
 
-        if (id == R.id.item2) { // CAMBIA SEGÚN TUS IDs
+        if (id == R.id.item2) {
             Toast.makeText(this, "Fixing", Toast.LENGTH_LONG).show();
             return true;
         }
 
-        if (id == R.id.item3) { // CAMBIA SEGÚN TUS IDs
-            // Puedo usar este para abrir Profile
+        if (id == R.id.item3) {
             startActivity(new Intent(MainActivity.this, Profile.class));
             return true;
         }
@@ -141,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
         builder.setTitle("Options!!");
         builder.setMessage("Where do you go?");
-        builder.setIcon(R.drawable.fresitas); // Cambia por tu ícono
+        builder.setIcon(R.drawable.fresitas);
 
         builder.setPositiveButton("Scrolling", (dialog, which) ->
                 Toast.makeText(MainActivity.this, "Scrolling...", Toast.LENGTH_LONG).show()
@@ -158,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showAlertDialogButtonClicked(MainActivity view) {
-        showAlertDialogButtonClicked(); // Llama al método sin parámetros
+        showAlertDialogButtonClicked();
     }
 
     protected SwipeRefreshLayout.OnRefreshListener mOnRefreshListener =
