@@ -30,8 +30,8 @@ El proyecto busca ofrecer una **interfaz moderna e intuitiva**, diseñada para q
 |----------|-------|------------|
 | Splash / Principal | ![Splash](https://github.com/user-attachments/assets/c7a7c577-4f15-4e42-be4f-e9affc8c525b) |
  Animación de logo y fondo, abre Login tras 5s, se encuentra implementada en la RamaLottie |
-| Icono app |<img width="314" height="75" alt="image" src="https://github.com/user-attachments/assets/f5d113f6-c05f-4685-9004-3d4c1bd00b9c" /> | icono de la aplicación |
-| Login | <img width="356" height="636" alt="Captura de pantalla 2025-12-08 133550" src="https://github.com/user-attachments/assets/85d98e3a-d0fd-475a-a11f-067378910b1f"/> | Login con campos y botones de navegación |
+| Icono app |<img width="314" height="75" alt="image" src="https://github.com/user-attachments/assets/11409eee-fe13-420f-b3ee-735451ce3e23" />
+| Login | <img width="298" height="653" alt="Captura de pantalla 2026-02-05 123759" src="https://github.com/user-attachments/assets/1e44d367-1b0a-4ee6-b5fd-923681ce323b" /> | Login con campos y botones de navegación |
 | Registro (Signup) |<img width="360" height="641" alt="Captura de pantalla 2025-12-08 133638" src="https://github.com/user-attachments/assets/e8bce2c0-d00d-4620-9728-0f355fefa935" />| Registro de usuario con Username, Password y Email |
 | Perfil de Usuario |<img width="367" height="656" alt="image" src="https://github.com/user-attachments/assets/ba344ca9-b362-4bf9-bd38-bce877766dbb" />| Visualización de avatar, nombre y descripción |
 | MainActivity |<img width="353" height="643" alt="Captura de pantalla 2025-12-08 134054" src="https://github.com/user-attachments/assets/5effe96c-d212-4728-af78-89c556d17ebb" />| WebView con SwipeRefreshLayout y menú contextual |
