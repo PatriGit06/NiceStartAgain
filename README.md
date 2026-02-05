@@ -28,7 +28,6 @@ El proyecto busca ofrecer una **interfaz moderna e intuitiva**, diseñada para q
 
 | Pantalla | Imagen | Descripción |
 |----------|-------|------------|
-| Uso de la app | https://github.com/user-attachments/assets/f2cec306-ac57-4ecd-9ce9-e71670e55cff|  |
 | Splash / Principal | ![Splash](https://github.com/user-attachments/assets/d140ca96-5fbd-4206-80ee-f50cc4f00f68) | Animación de logo y fondo, abre Login tras 5s, se encuentra implementada en la RamaLottie |
 | Icono app |<img width="314" height="75" alt="image" src="https://github.com/user-attachments/assets/f5d113f6-c05f-4685-9004-3d4c1bd00b9c" /> | icono de la aplicación |
 | Login | <img width="356" height="636" alt="Captura de pantalla 2025-12-08 133550" src="https://github.com/user-attachments/assets/85d98e3a-d0fd-475a-a11f-067378910b1f"/> | Login con campos y botones de navegación |
