@@ -7,7 +7,7 @@ El proyecto busca ofrecer una **interfaz moderna e intuitiva**, diseñada para q
 
 ---
 
-## ✨ 1. Características Principales
+##  1. Características Principales
 
 ###  1.1 Diseño UI/UX
 - Material Design 3  
