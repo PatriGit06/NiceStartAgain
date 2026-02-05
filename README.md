@@ -34,62 +34,60 @@ El proyecto busca ofrecer una **interfaz moderna e intuitiva**, diseñada para q
 | Login | <img width="298" height="653" alt="Captura de pantalla 2026-02-05 123759" src="https://github.com/user-attachments/assets/1e44d367-1b0a-4ee6-b5fd-923681ce323b" /> | Login con campos y botones de navegación |
 | Registro (Signup) |<img width="363" height="658" alt="Captura de pantalla 2026-02-05 124125" src="https://github.com/user-attachments/assets/a5b9813f-696e-405e-b5d7-3fbb0c1a2056" /> | Registro de usuario con Username, Password y Email |
 | Perfil de Usuario |<img width="306" height="545" alt="Captura de pantalla 2026-02-05 124147" src="https://github.com/user-attachments/assets/e47ae7c7-19ae-4175-a2b2-233a473705e9" /> | Visualización de avatar, nombre y descripción |
-| MainActivity |<img width="353" height="643" alt="Captura de pantalla 2025-12-08 134054" src="https://github.com/user-attachments/assets/5effe96c-d212-4728-af78-89c556d17ebb" />| WebView con SwipeRefreshLayout y menú contextual |
-|BottomAppBar |<img width="315" height="609" alt="image" src="https://github.com/user-attachments/assets/141923e1-a715-46d2-b3a2-7e3fdf74aa6a" />|SwipeRefreshLayout con WebView y BottomAppBar|
+| MainActivity |<img width="336" height="716" alt="Captura de pantalla 2026-02-05 124422" src="https://github.com/user-attachments/assets/ddc47ae8-5d9b-49eb-93d5-e10ed99aa817" /> | WebView con SwipeRefreshLayout y menú contextual |
 
 ---
 
-##  3. Funcionalidades por Pantalla
+## 3. Funcionalidades por Pantalla
 
-###  3.1 Splash / Principal
-- Animación del logo con fadeIn  
+### 3.1 Splash / Principal
+- Logo animado
 - Fondo cargado con Glide  
-- Después de 5 segundos, abre la pantalla de Login  
+- Tras 5 segundos, abre Login  
 
-###  3.2 Login
-- Campos de Username y Password con iconos  
-- Botón **LOGIN** abre MainActivity  
-- Botón **SIGN UP** abre Signup  
-- Diseño responsivo y moderno  
+### 3.2 Login
+- Campos de Usuario y Contraseña con iconos  
+- Botón **LOGIN** → MainActivity  
+- Botón **SIGN UP** → Signup  
+- Diseño moderno y responsivo  
 
-###  3.3 Registro (Signup)
-- Campos de Username, Password y Email  
-- Botón **CREATE ACCOUNT** abre Login  
-- Botón **LOGIN** vuelve al Login  
-- Estilo Material y layout responsivo  
+### 3.3 Registro (Signup)
+- Campos: Usuario, Contraseña y Email  
+- Botón **CREATE ACCOUNT** → Login  
+- Botón **LOGIN** → vuelve al Login  
+- Interfaz Material y adaptable  
 
-###  3.4 MainActivity
+### 3.4 MainActivity
 - WebView con imagen aleatoria  
 - SwipeRefreshLayout con mensaje de actualización  
-- Menú contextual y appbar con opciones:  
+- AppBar y menú con opciones:  
   - Copiar ítem (Toast)  
   - Descargar ítem (Toast)  
-  - Salir / ir al Login  
+  - Salir / volver a Login  
   - Abrir Perfil  
-  - AlertDialog con opciones de navegación  
+  - AlertDialog con navegación  
 
-###  3.5 Perfil
-- Avatar circular personalizable  
+### 3.5 Perfil
+- Avatar circular editable  
 - Nombre y descripción  
 - Toolbar con flecha atrás  
-- Colores y diseño limpio
+- Diseño limpio y colores consistentes  
 
-###  3.6 Locales(Cambio de idioma) 
-- Cambio de idioma según la preferencia
+### 3.6 Locales
+- Cambio de idioma según preferencia  
 
-###  3.6 Funcionalidad de alternancia entre modo claro y modo oscuro.
-- Cambio de tema: claro / oscuro
+### 3.7 Modo Claro / Oscuro
+- Alternancia entre tema claro y oscuro  
 
-###  3.7 BottomAppBar
-- FloatingActionButton (FAB) centrado
-- Menú de opciones
-- Icono de navegación
-- Interacción con el contenido: 
----
+### 3.8 BottomAppBar
+- FAB centrado  
+- Menú de opciones y navegación  
+- Interacción con contenido  
 
-###  3.8 Funcionalidades Adicionales
-- Se ha añadido un sistema de persistencia de sesión utilizando SharedPreferences, que permite que el usuario no tenga que iniciar sesión cada vez que abre la aplicación.
-- Una vez que el usuario se autentica correctamente, la sesión queda guardada y la app accede directamente a la pantalla principal mientras no se cierre sesión manualmente.
+### 3.9 Funcionalidades Adicionales
+- Persistencia de sesión con SharedPreferences  
+- Usuario autenticado entra directo a la pantalla principal hasta cerrar sesión manualmente
+
 
 ##  4. Estructura del Proyecto
 
